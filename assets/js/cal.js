@@ -9,7 +9,7 @@ window.onload = function() {
       IP_Addr.setCustomValidity("");
     }
     for (var i in ip) {
-      var iInt = parseInt(ipList[i]);
+      var iInt = parseInt(ip[i]);
       if (0 > iInt || 255 < iInt) {
         IP_Addr.setCustomValidity("Invalid IP Address");
 		  }
