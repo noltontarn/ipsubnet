@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <h1 class="text-center">IP Subnet Calculator</h1>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h2 class="text-center panel-title">INPUT </h2></div>
+        <div class="panel-body">
+            <form action="javascript:change_subnet();" id="form_network_class">
+                <div class="row">
+                    <div class="col-md-2">
+                        <label>Network Class</label>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="checkbox">
+                            <label>
+                                <input name="network_class" type="checkbox" value="any" onclick="this.form.submit();" checked="">ANY</label>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="checkbox">
+                            <label>
+                                <input name="network_class" type="checkbox" value="A" onclick="this.form.submit();"> A</label>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="checkbox">
+                            <label>
+                                <input name="network_class" type="checkbox" value="B" onclick="this.form.submit();">B</label>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="checkbox">
+                            <label>
+                                <input name="network_class" type="checkbox" value="C" onclick="this.form.submit();">C</label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <form id="form_calculate" action="javascript:get_result();">
+                <div class="row">
+                    <div class="col-md-2">
+                        <label>Subnet </label>
+                    </div>
+                    <div class="col-md-12">
+                      <select class="decorated" name="subnet" id="subnet" >
+                        <div><script> javascript:createChoice(1); </script></div>
+                      </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <label>IP Address</label>
+                    </div>
+                    <div class="col-md-6">
+                        <input id="IP_Address" class="form-control" type="text" value="255.255.255.255" pattern="(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)">
+                    </div>
+                </div>
+                <button class="btn btn-default center-block" type="submit">Calculate </button>
+            </form>
+        </div>
+    </div>
+    <div class="row" id="result">
+      <div id="div-table-2" >
+      </div>
+
+      <div id="div-table-3" >
+      </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/cal.js"></script>
+</body>
+
+</html>
