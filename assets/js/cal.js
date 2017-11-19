@@ -1,12 +1,22 @@
 window.onload = function() {
   var IP_Addr = document.getElementById("IP_Address");
   IP_Addr.addEventListener("input", function(event) {
-    var ip = "(\d|[1-9]\d|1\d\d|2([0-4]\d|5[0-5]))\.(\d|[1-9]\d|1\d\d|2([0-4]\d|5[0-5]))\.(\d|[1-9]\d|1\d\d|2([0-4]\d|5[0-5]))\.(\d|[1-9]\d|1\d\d|2([0-4]\d|5[0-5]))";
-    if ((IP_Addr.value).match(ip)) {
+    var ip = IP_Addr.split(".");
+    if (ip.length != 4) {
+		    IP_Addr.setCustomValidity("Invalid IP Address");
+	  }
+    else {
       IP_Addr.setCustomValidity("");
-    } else {
-      IP_Addr.setCustomValidity("Please enter a valid IP Address");
     }
+    for (var i in ip) {
+      var iInt = parseInt(ipList[i]);
+      if (0 > iInt || 255 < iInt) {
+        IP_Addr.setCustomValidity("Invalid IP Address");
+		  }
+      else {
+        IP_Addr.setCustomValidity("");
+      }
+	  }
   });
 }
 
