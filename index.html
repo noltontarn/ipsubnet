@@ -14,9 +14,9 @@
 
 <body>
     <h1 class="text-center">IP Subnet Calculator</h1>
-    <div class="panel panel-default">
+    <div class="panel panel-default" style="text-align:center">
         <div class="panel-heading">
-            <h2 class="text-center panel-title">INPUT </h2></div>
+            <h2 class="text-center panel-title">Input </h2></div>
         <div class="panel-body">
             <form action="javascript:change_subnet();" id="form_network_class">
                 <div class="row">
@@ -26,7 +26,7 @@
                     <div class="col-md-2">
                         <div class="checkbox">
                             <label>
-                                <input name="network_class" type="radio" value="any" onclick="this.form.submit();">ANY</label>
+                                <input name="network_class" type="radio" value="any" onclick="this.form.submit();" checked>ANY</label>
                         </div>
                     </div>
                     <div class="col-md-2">
@@ -68,11 +68,11 @@
                         <input id="IP_Address" class="form-control" type="text" value="255.255.255.255" pattern="(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)">
                     </div>
                 </div>
-                <button class="btn btn-default center-block" type="submit">Calculate </button>
+                <button class="btn btn-default center-block" type="submit">Submit Input </button>
             </form>
         </div>
     </div>
-    <div class="row" id="result">
+    <div class="row" id="result" style="text-align:center">
       <div id="div-table-2" >
       </div>
 

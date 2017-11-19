@@ -177,7 +177,7 @@ function possible_network(ip, subnet, num_host) {
   div_table_3.className = "panel panel-default";
   var table = document.createElement("table");
   table.id = "table-3";
-  table.className = "panel-body";
+  table.className = "panel-body col-md-offset-4";;
   var head = document.createElement("p");
   head.id = "Topic-2";
   head.className = "panel-heading";
@@ -273,7 +273,7 @@ function get_result() {
   div_table_2.className = "panel panel-default";
   var table_2 = document.createElement("table");
   table_2.id = "table-2";
-  table_2.className = "panel-body";
+  table_2.className = "panel-body col-md-offset-4";
   var head = document.createElement("p");
   head.id = "Topic-2";
   head.className = "panel-heading";
