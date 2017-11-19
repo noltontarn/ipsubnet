@@ -1,7 +1,7 @@
 window.onload = function() {
   var IP_Addr = document.getElementById("IP_Address");
   IP_Addr.addEventListener("input", function(event) {
-    var ip = IP_Addr.split(".");
+    var ip = IP_Addr.value.split(".");
     if (ip.length != 4) {
 		    IP_Addr.setCustomValidity("Invalid IP Address");
 	  }
