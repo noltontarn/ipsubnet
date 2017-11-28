@@ -185,12 +185,13 @@ optgroup {
 }
 
 table {
-  border-spacing: 0;
-  border-collapse: collapse
+  border-collapse: separate;
+  border-spacing: 50px 0;
+  border: 1px solid silver;
 }
 
 td, th {
-  padding: 0
+  padding: 10px 0;
 }
 
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
