@@ -283,9 +283,13 @@ function result() {
   }
     tableResult.appendChild(table);
 
-  if(subnet != 32 && subnet != 24 && subnet != 16 && subnet != 8) {
+  if(subnet != 8 && subnet != 16 && subnet != 24 && subnet != 32) {
     var tablePossible = document.getElementById("tablePossible");
     tablePossible.innerHTML = "";
     possible(ip, subnet, hostnum);
+  }
+  else {
+    var tablePossible = document.getElementById("tablePossible");
+    tablePossible.innerHTML = "";
   }
 }
